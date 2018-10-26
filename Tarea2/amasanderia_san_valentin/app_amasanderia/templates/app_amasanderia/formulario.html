@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="container">
+        <div id="titulo">
+            <h1>DESAFIO 3</h1>
+        </div>
+
+        <form method="POST" action="/resultado"> {% csrf_token %}
+            <div class="form-group">
+            <label for="Ingresa tu Nombre">Ingresa Nombre</label>
+            <input type="text" id="nombre"  name="nombre">
+            </div>
+
+            <div class="form-group">
+            <label for="Ingresa tu Fecha de Nacimiento">Ingresa Fecha de Nacimiento</label>
+            <input type="textArea" id="duda" name="duda">
+            </div>
+
+
+            <div class="form-group">
+            <label for="Ingresa tu Edad">Ingresa Edad</label>
+            <input type="text" id="edad" name="edad">
+            </div>
+
+            <div class="form-group">
+            <label for="Ingresa tu E-mail">Ingresa tu E-mail</label>
+            <input type="text" id="email" name="email">
+            </div>
+
+            <input type="submit">
+
+        </form>
+    </div>
+</body>
+</html>
